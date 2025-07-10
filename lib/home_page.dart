@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/model/race_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  final List<Map<String, String>> races = const [
-    {'name': 'British GP', 'date': '2025-07-06', 'location': 'Silverstone'},
-    {'name': 'Hungarian GP', 'date': '2025-07-20', 'location': 'Hungaroring'},
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +12,39 @@ class HomePage extends StatelessWidget {
         itemCount: races.length,
         itemBuilder: (context, index) {
           final race = races[index];
-          return ListTile(
-            title: Text(race['name'] ?? ''),
-            subtitle: Text('${race['location']} • ${race['date']}'),
-            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+          return Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ListTile(
+              leading: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.network(
+                  race['flagUrl']!,
+                  width: 40,
+                  height: 40,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) =>
+                      const Icon(Icons.flag),
+                ),
+              ),
+              title: Text(
+                'Round ${race['round']} • ${race['country']}',
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(race['grandPrix'] ?? ''),
+                  Text(
+                    race['date'] ?? '',
+                    style: const TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+              onTap: () {
+                // Bisa diarahkan ke detail page
+              },
+            ),
           );
         },
       ),
