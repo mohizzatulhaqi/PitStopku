@@ -14,8 +14,10 @@ class GlassCard extends StatelessWidget {
         filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
         child: Container(
           decoration: BoxDecoration(
+            // ignore: deprecated_member_use
             color: Colors.white.withOpacity(0.2),
             borderRadius: BorderRadius.circular(16),
+            // ignore: deprecated_member_use
             border: Border.all(color: Colors.white.withOpacity(0.3)),
           ),
           child: Material(type: MaterialType.transparency, child: child),

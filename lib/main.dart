@@ -13,7 +13,11 @@ class PitStopkuApp extends StatelessWidget {
     return MaterialApp(
       title: 'PitStopku',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.red, useMaterial3: false),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        fontFamily: 'F1',
+        useMaterial3: false,
+      ),
       home: const HomePage(),
     );
   }

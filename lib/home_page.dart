@@ -128,8 +128,8 @@ class _HomePageState extends State<HomePage> {
           ? FloatingActionButton(
               backgroundColor: Colors.red,
               foregroundColor: Colors.white,
-              child: const Icon(Icons.arrow_upward_rounded),
               onPressed: _scrollToTop,
+              child: const Icon(Icons.arrow_upward_rounded),
             )
           : null,
     );
