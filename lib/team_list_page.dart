@@ -158,7 +158,7 @@ class _TeamsListPageState extends State<TeamsListPage> {
 
       floatingActionButton: ScrollToTopFAB(
         scrollController: _scrollController,
-        backgroundColor: Colors.red,
+        backgroundColor: customRed,
         foregroundColor: Colors.white,
         showThreshold: 200.0,
       ),

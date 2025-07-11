@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/theme/custom_colors.dart';
 
 class ScrollToTopFAB extends StatefulWidget {
   final ScrollController scrollController;
@@ -15,7 +16,7 @@ class ScrollToTopFAB extends StatefulWidget {
     super.key,
     required this.scrollController,
     this.showThreshold = 200.0,
-    this.backgroundColor = Colors.red,
+    this.backgroundColor = customRed,
     this.foregroundColor = Colors.white,
     this.icon = Icons.arrow_upward_rounded,
     this.animationDuration = const Duration(milliseconds: 300),
@@ -115,7 +116,7 @@ class SimpleScrollToTopFAB extends StatefulWidget {
     super.key,
     required this.scrollController,
     this.showThreshold = 200.0,
-    this.backgroundColor = Colors.red,
+    this.backgroundColor = customRed,
     this.foregroundColor = Colors.white,
     this.icon = Icons.arrow_upward_rounded,
   });

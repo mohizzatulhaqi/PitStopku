@@ -125,7 +125,7 @@ class _RaceCalendarPageState extends State<RaceCalendarPage> {
 
       floatingActionButton: ScrollToTopFAB(
         scrollController: _scrollController,
-        backgroundColor: Colors.red,
+        backgroundColor: customRed,
         foregroundColor: Colors.white,
         showThreshold: 200.0,
       ),
