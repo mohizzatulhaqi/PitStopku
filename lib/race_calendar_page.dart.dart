@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/model/race_list.dart';
+import 'package:pitstop/race_detail_page.dart';
 import 'package:pitstop/widget/glass_card.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class RaceCalendarPage extends StatefulWidget {
+  const RaceCalendarPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<RaceCalendarPage> createState() => _RaceCalendarPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _RaceCalendarPageState extends State<RaceCalendarPage> {
   final ScrollController _scrollController = ScrollController();
   bool _showScrollToTopButton = false;
 
@@ -78,7 +79,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: GlassCard(
                 child: ListTile(
-                  contentPadding: const EdgeInsets.all(8),
+                  contentPadding: const EdgeInsets.all(12),
                   leading: ClipRRect(
                     borderRadius: BorderRadius.circular(100),
                     child: Image.network(
@@ -95,18 +96,30 @@ class _HomePageState extends State<HomePage> {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
+                      fontSize: 16,
                     ),
                   ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const SizedBox(height: 4),
                       Text(
-                        race['grandPrix'] ?? '',
-                        style: const TextStyle(color: Colors.white),
+                        _shortenGrandPrixName(race['grandPrix'] ?? ''),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          height: 1.2,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
+                      const SizedBox(height: 4),
                       Text(
                         race['date'] ?? '',
-                        style: const TextStyle(color: Colors.white70),
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 13,
+                        ),
                       ),
                     ],
                   ),
@@ -116,7 +129,12 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                   onTap: () {
-                    // Detail page logic (optional)
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RaceDetailPage(race: race),
+                      ),
+                    );
                   },
                 ),
               ),
@@ -133,5 +151,26 @@ class _HomePageState extends State<HomePage> {
             )
           : null,
     );
+  }
+
+  String _shortenGrandPrixName(String grandPrix) {
+    String shortened = grandPrix
+        .replaceAll('FORMULA 1 ', '')
+        .replaceAll('ROLEX ', '')
+        .replaceAll('ARAMCO ', '')
+        .replaceAll('CRYPTO.COM ', '')
+        .replaceAll('MSC CRUISES ', '')
+        .replaceAll('GULF AIR ', '')
+        .replaceAll('STC ', '')
+        .replaceAll('AWS ', '')
+        .replaceAll('QATAR AIRWAYS ', '')
+        .replaceAll('PIRELLI ', '')
+        .replaceAll('LENOVO ', '')
+        .replaceAll('HEINEKEN ', '')
+        .replaceAll('HEINEKEN SILVER ', '')
+        .replaceAll('SINGAPORE AIRLINES ', '')
+        .replaceAll('ETIHAD AIRWAYS ', '');
+
+    return shortened;
   }
 }

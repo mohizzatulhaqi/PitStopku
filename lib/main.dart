@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pitstop/home_page.dart';
+import 'package:pitstop/race_calendar_page.dart.dart';
 
 void main() {
   runApp(const PitStopkuApp());
@@ -18,7 +18,7 @@ class PitStopkuApp extends StatelessWidget {
         fontFamily: 'F1',
         useMaterial3: false,
       ),
-      home: const HomePage(),
+      home: const RaceCalendarPage(),
     );
   }
 }
