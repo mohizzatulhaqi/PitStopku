@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/widget/favorite_toggle_button.dart';
 
 class TeamDetailPage extends StatefulWidget {
   final Map<String, dynamic> team;
@@ -10,25 +11,19 @@ class TeamDetailPage extends StatefulWidget {
 }
 
 class _TeamDetailPageState extends State<TeamDetailPage> {
-  bool isFavorited = false;
+  bool _isTeamFavorited = false;
 
-  void toggleFavorite() {
+  @override
+  void initState() {
+    super.initState();
+
+    _isTeamFavorited = false;
+  }
+
+  void _onFavoriteToggle(bool newFavoriteStatus) {
     setState(() {
-      isFavorited = !isFavorited;
+      _isTeamFavorited = newFavoriteStatus;
     });
-
-    final message = isFavorited
-        ? '${widget.team['name']} added to favorites.'
-        : '${widget.team['name']} removed from favorites.';
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        duration: const Duration(seconds: 2),
-        behavior: SnackBarBehavior.floating,
-        backgroundColor: Colors.grey[900],
-      ),
-    );
   }
 
   @override
@@ -56,19 +51,10 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
               ),
             ),
             actions: [
-              Container(
-                margin: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: IconButton(
-                  icon: Icon(
-                    isFavorited ? Icons.favorite : Icons.favorite_border,
-                    color: isFavorited ? Colors.red : Colors.white,
-                  ),
-                  onPressed: toggleFavorite,
-                ),
+              FavoriteToggleButton(
+                initialIsFavorite: _isTeamFavorited,
+                onToggle: _onFavoriteToggle,
+                itemName: widget.team['name'] ?? 'This Team',
               ),
             ],
             flexibleSpace: FlexibleSpaceBar(
@@ -350,7 +336,7 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
                                     width: 140,
                                     height: 120,
                                     fit: BoxFit.cover,
-                                    alignment: Alignment(0.0, -1.0),
+                                    alignment: const Alignment(0.0, -1.0),
                                     errorBuilder: (context, error, stackTrace) {
                                       return Container(
                                         width: 130,
