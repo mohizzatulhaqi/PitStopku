@@ -91,7 +91,7 @@ class _TeamsListPageState extends State<TeamsListPage> {
                               team['name'],
                               style: const TextStyle(
                                 color: Colors.white,
-                                fontSize: 20,
+                                fontSize: 23,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
