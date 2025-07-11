@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/race_calendar_page.dart.dart';
+import 'package:pitstop/team_list_page.dart';
 
 void main() {
   runApp(const PitStopkuApp());
@@ -18,7 +19,7 @@ class PitStopkuApp extends StatelessWidget {
         fontFamily: 'F1',
         useMaterial3: false,
       ),
-      home: const RaceCalendarPage(),
+      home: const TeamsListPage(),
     );
   }
 }
