@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:pitstop/model/race_list.dart';
 import 'package:pitstop/race_detail_page.dart';
@@ -25,7 +27,7 @@ class _RaceCalendarPageState extends State<RaceCalendarPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('PitStopku'),
+        title: const Text('Race Schedule'),
         centerTitle: true,
         backgroundColor: Colors.red,
         foregroundColor: Colors.white,
@@ -52,15 +54,22 @@ class _RaceCalendarPageState extends State<RaceCalendarPage> {
               child: GlassCard(
                 child: ListTile(
                   contentPadding: const EdgeInsets.all(12),
-                  leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.network(
-                      race['flagUrl']!,
-                      width: 40,
-                      height: 40,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) =>
-                          const Icon(Icons.flag),
+                  leading: Container(
+                    width: 45,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 2),
+                    ),
+                    child: ClipOval(
+                      child: Image.network(
+                        race['flagUrl']!,
+                        width: 45,
+                        height: 45,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) =>
+                            const Icon(Icons.flag),
+                      ),
                     ),
                   ),
                   title: Text(
