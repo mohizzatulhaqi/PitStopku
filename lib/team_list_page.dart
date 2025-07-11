@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/model/teams_data.dart';
+import 'package:pitstop/theme/custom_colors.dart';
 import 'package:pitstop/widget/glass_card.dart';
 import 'package:pitstop/widget/scroll_to_top_fab.dart';
 import 'package:pitstop/team_detail_page.dart';
@@ -27,7 +28,7 @@ class _TeamsListPageState extends State<TeamsListPage> {
       appBar: AppBar(
         title: const Text('Teams'),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: customRed,
         foregroundColor: Colors.white,
       ),
       body: ListView(
