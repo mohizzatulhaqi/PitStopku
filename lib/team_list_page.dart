@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/model/teams_data.dart';
 import 'package:pitstop/widget/glass_card.dart';
+import 'package:pitstop/widget/scroll_to_top_fab.dart';
 
 class TeamsListPage extends StatefulWidget {
   const TeamsListPage({super.key});
@@ -11,32 +12,11 @@ class TeamsListPage extends StatefulWidget {
 
 class _TeamsListPageState extends State<TeamsListPage> {
   final ScrollController _scrollController = ScrollController();
-  bool _showScrollToTopButton = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController.addListener(() {
-      if (_scrollController.offset > 200 && !_showScrollToTopButton) {
-        setState(() => _showScrollToTopButton = true);
-      } else if (_scrollController.offset <= 200 && _showScrollToTopButton) {
-        setState(() => _showScrollToTopButton = false);
-      }
-    });
-  }
 
   @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
-  }
-
-  void _scrollToTop() {
-    _scrollController.animateTo(
-      0,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeInOut,
-    );
   }
 
   @override
@@ -157,14 +137,12 @@ class _TeamsListPageState extends State<TeamsListPage> {
         ],
       ),
 
-      floatingActionButton: _showScrollToTopButton
-          ? FloatingActionButton(
-              backgroundColor: Colors.red,
-              foregroundColor: Colors.white,
-              onPressed: _scrollToTop,
-              child: const Icon(Icons.arrow_upward_rounded),
-            )
-          : null,
+      floatingActionButton: ScrollToTopFAB(
+        scrollController: _scrollController,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        showThreshold: 200.0, 
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pitstop/model/race_list.dart';
 import 'package:pitstop/race_detail_page.dart';
 import 'package:pitstop/widget/glass_card.dart';
+import 'package:pitstop/widget/scroll_to_top_fab.dart';
 
 class RaceCalendarPage extends StatefulWidget {
   const RaceCalendarPage({super.key});
@@ -12,40 +13,11 @@ class RaceCalendarPage extends StatefulWidget {
 
 class _RaceCalendarPageState extends State<RaceCalendarPage> {
   final ScrollController _scrollController = ScrollController();
-  bool _showScrollToTopButton = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController.addListener(() {
-      if (_scrollController.offset > 200) {
-        if (!_showScrollToTopButton) {
-          setState(() {
-            _showScrollToTopButton = true;
-          });
-        }
-      } else {
-        if (_showScrollToTopButton) {
-          setState(() {
-            _showScrollToTopButton = false;
-          });
-        }
-      }
-    });
-  }
 
   @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
-  }
-
-  void _scrollToTop() {
-    _scrollController.animateTo(
-      0,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeInOut,
-    );
   }
 
   @override
@@ -142,14 +114,13 @@ class _RaceCalendarPageState extends State<RaceCalendarPage> {
           }),
         ],
       ),
-      floatingActionButton: _showScrollToTopButton
-          ? FloatingActionButton(
-              backgroundColor: Colors.red,
-              foregroundColor: Colors.white,
-              onPressed: _scrollToTop,
-              child: const Icon(Icons.arrow_upward_rounded),
-            )
-          : null,
+      // Menggunakan komponen reusable ScrollToTopFAB
+      floatingActionButton: ScrollToTopFAB(
+        scrollController: _scrollController,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        showThreshold: 200.0,
+      ),
     );
   }
 
