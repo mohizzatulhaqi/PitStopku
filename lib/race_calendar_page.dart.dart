@@ -114,7 +114,7 @@ class _RaceCalendarPageState extends State<RaceCalendarPage> {
           }),
         ],
       ),
-      // Menggunakan komponen reusable ScrollToTopFAB
+
       floatingActionButton: ScrollToTopFAB(
         scrollController: _scrollController,
         backgroundColor: Colors.red,
