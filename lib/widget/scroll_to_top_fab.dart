@@ -104,7 +104,6 @@ class _ScrollToTopFABState extends State<ScrollToTopFAB>
   }
 }
 
-// Alternatif versi yang lebih simple tanpa animasi custom
 class SimpleScrollToTopFAB extends StatefulWidget {
   final ScrollController scrollController;
   final double showThreshold;

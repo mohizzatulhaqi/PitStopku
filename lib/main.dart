@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:pitstop/team_list_page.dart';
+import 'package:pitstop/home_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class PitStopkuApp extends StatelessWidget {
         fontFamily: 'F1',
         useMaterial3: false,
       ),
-      home: const TeamsListPage(),
+      home: const HomePage(),
     );
   }
 }
