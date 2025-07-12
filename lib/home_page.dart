@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/driver_list_page.dart';
 import 'package:pitstop/race_calendar_page.dart.dart';
 import 'package:pitstop/team_list_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
@@ -37,12 +38,10 @@ class _HomePageState extends State<HomePage> {
         controller: _scrollController,
         padding: const EdgeInsets.symmetric(vertical: 16),
         children: [
-          // Hero Section
           _buildHeroSection(),
 
           const SizedBox(height: 24),
 
-          // Navigation Cards
           _buildNavigationCards(),
 
           const SizedBox(height: 16),
@@ -230,7 +229,14 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(height: 12),
           GlassCard(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DriverListPage(),
+                  ),
+                );
+              },
               borderRadius: BorderRadius.circular(16),
               child: Container(
                 height: 100,

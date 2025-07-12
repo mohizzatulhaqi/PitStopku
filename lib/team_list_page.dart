@@ -128,7 +128,6 @@ class _TeamsListPageState extends State<TeamsListPage> {
                               ),
                               child: IconButton(
                                 onPressed: () {
-                                  // Navigate to detail page (sama dengan tap gesture)
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

@@ -119,7 +119,6 @@ class _RaceDetailPageState extends State<RaceDetailPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Info Card with Favorite Button
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
@@ -130,7 +129,6 @@ class _RaceDetailPageState extends State<RaceDetailPage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Race Info
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -154,7 +152,6 @@ class _RaceDetailPageState extends State<RaceDetailPage> {
                             ],
                           ),
                         ),
-                        // Favorite Icon
                         IconButton(
                           icon: Icon(
                             isFavorited
