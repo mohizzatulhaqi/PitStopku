@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/compare_page.dart';
 import 'package:pitstop/driver_list_page.dart';
 import 'package:pitstop/race_calendar_page.dart.dart';
+import 'package:pitstop/widget/glass_card.dart';
 import 'package:pitstop/team_list_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
-import 'package:pitstop/widget/glass_card.dart';
 import 'package:pitstop/widget/scroll_to_top_fab.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -39,11 +40,8 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.symmetric(vertical: 16),
         children: [
           _buildHeroSection(),
-
           const SizedBox(height: 24),
-
           _buildNavigationCards(),
-
           const SizedBox(height: 16),
         ],
       ),
@@ -227,40 +225,84 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           const SizedBox(height: 12),
-          GlassCard(
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DriverListPage(),
-                  ),
-                );
-              },
-              borderRadius: BorderRadius.circular(16),
-              child: Container(
-                height: 100,
-                padding: const EdgeInsets.all(16),
-                child: const Row(
-                  children: [
-                    Icon(
-                      CupertinoIcons.person_2_fill,
-                      color: customRed,
-                      size: 32,
-                    ),
-                    SizedBox(width: 16),
-                    Text(
-                      'Drivers',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+          Row(
+            children: [
+              Expanded(
+                child: GlassCard(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DriverListPage(),
+                        ),
+                      );
+                    },
+                    borderRadius: BorderRadius.circular(16),
+                    child: Container(
+                      height: 100,
+                      padding: const EdgeInsets.all(16),
+                      child: const Row(
+                        children: [
+                          Icon(
+                            CupertinoIcons.person_2_fill,
+                            color: customRed,
+                            size: 32,
+                          ),
+                          SizedBox(width: 16),
+                          Text(
+                            'Drivers',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: GlassCard(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ComparisonPage(),
+                        ),
+                      );
+                    },
+                    borderRadius: BorderRadius.circular(16),
+                    child: Container(
+                      height: 100,
+                      padding: const EdgeInsets.all(16),
+                      child: const Row(
+                        children: [
+                          Icon(
+                            CupertinoIcons.chart_bar_alt_fill,
+                            color: customRed,
+                            size: 32,
+                          ),
+                          SizedBox(width: 16),
+                          Text(
+                            'Compare',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
