@@ -19,7 +19,7 @@ A beautiful and modern Flutter app for Formula 1 fans! Get all the info about te
 ## ⚡ Getting Started
 1. **Clone this repo**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/mohizzatulhaqi/PitStopku.git
    cd pitstop
    ```
 2. **Install dependencies**
@@ -49,6 +49,3 @@ A beautiful and modern Flutter app for Formula 1 fans! Get all the info about te
 - [mohizzatulhaqi](https://github.com/mohizzatulhaqi)
 
 ---
-
-## 📄 License
-MIT
