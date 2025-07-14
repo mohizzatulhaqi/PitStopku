@@ -16,7 +16,6 @@ class GlassCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.2),
             borderRadius: BorderRadius.circular(16),
-
             border: Border.all(color: Colors.white.withOpacity(0.3)),
           ),
           child: Material(type: MaterialType.transparency, child: child),
@@ -158,7 +157,6 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                         ),
                       ),
                     ),
-
                   Positioned(
                     top: 90,
                     left: 20,
@@ -192,8 +190,7 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                       ),
                     ),
                   ),
-
-                  if (widget.driver['teamLogoUrl'] != null)
+                  if (widget.driver['logoUrl'] != null)
                     Positioned(
                       top: 90,
                       left: 140,
@@ -308,11 +305,12 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                         ),
                         _buildInfoRow(
                           'Date of Birth',
-                          widget.driver['dateOfBirth'] ?? 'Unknown',
+                          widget.driver['dateOfBirth']?.toString() ?? 'Unknown',
                         ),
                         _buildInfoRow(
                           'Place of Birth',
-                          widget.driver['placeOfBirth'] ?? 'Unknown',
+                          widget.driver['placeOfBirth']?.toString() ??
+                              'Unknown',
                         ),
                         _buildInfoRow(
                           'World Championships',
@@ -333,15 +331,17 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                         ),
                         _buildInfoRow(
                           'Highest Race Finish',
-                          widget.driver['highestRaceFinish'] ?? 'Unknown',
+                          widget.driver['highestRaceFinish']?.toString() ??
+                              'Unknown',
                         ),
                         _buildInfoRow(
                           'Highest Grid Position',
-                          widget.driver['highestGridPosition'] ?? 'Unknown',
+                          widget.driver['highestGridPosition']?.toString() ??
+                              'Unknown',
                         ),
                         _buildInfoRow(
                           'Pole Positions',
-                          widget.driver['polePositions'] ?? '0',
+                          widget.driver['polePositions']?.toString() ?? '0',
                         ),
                         _buildInfoRow(
                           'DNFs',
@@ -351,13 +351,10 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                     ),
                   ),
                   const SizedBox(height: 24),
-
                   _buildGallerySection(teamColor),
                   const SizedBox(height: 24),
-
                   _buildQuotesSection(teamColor),
                   const SizedBox(height: 24),
-
                   if (widget.driver['biography'] != null) ...[
                     const Text(
                       'Biography',
@@ -376,7 +373,7 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                         border: Border.all(color: teamColor.withOpacity(0.3)),
                       ),
                       child: Text(
-                        widget.driver['biography'],
+                        widget.driver['biography'].toString(),
                         style: const TextStyle(
                           color: Colors.white70,
                           fontSize: 16,
@@ -386,7 +383,6 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                     ),
                     const SizedBox(height: 24),
                   ],
-
                   if (widget.driver['achievements'] != null &&
                       widget.driver['achievements'] is List) ...[
                     const Text(
