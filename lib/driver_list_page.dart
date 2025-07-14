@@ -12,7 +12,6 @@ class DriverListPage extends StatefulWidget {
 }
 
 class _DriverListPageState extends State<DriverListPage> {
-  String searchQuery = '';
   List<Map<String, dynamic>> allDrivers = [];
 
   late final ScrollController _scrollController;
@@ -45,22 +44,6 @@ class _DriverListPageState extends State<DriverListPage> {
     }
   }
 
-  List<Map<String, dynamic>> get filteredDrivers {
-    if (searchQuery.isEmpty) {
-      return allDrivers;
-    }
-    return allDrivers.where((driver) {
-      final name = driver['name']?.toString().toLowerCase() ?? '';
-      final teamName = driver['teamName']?.toString().toLowerCase() ?? '';
-      final number = driver['number']?.toString() ?? '';
-      final query = searchQuery.toLowerCase();
-
-      return name.contains(query) ||
-          teamName.contains(query) ||
-          number.contains(query);
-    }).toList();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,11 +61,11 @@ class _DriverListPageState extends State<DriverListPage> {
         ),
         centerTitle: true,
       ),
-      // Use the ScrollController in the ListView.builder
       body: ListView.builder(
         controller: _scrollController,
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        itemCount: filteredDrivers.length + 1,
+
+        itemCount: allDrivers.length + 1,
         itemBuilder: (context, index) {
           if (index == 0) {
             return const Padding(
@@ -99,13 +82,13 @@ class _DriverListPageState extends State<DriverListPage> {
           }
 
           final driverIndex = index - 1;
-          final driver = filteredDrivers[driverIndex];
+
+          final driver = allDrivers[driverIndex];
           final teamColor = driver['teamColor'] as Color;
 
           bool isNewTeam =
               driverIndex == 0 ||
-              filteredDrivers[driverIndex - 1]['teamName'] !=
-                  driver['teamName'];
+              allDrivers[driverIndex - 1]['teamName'] != driver['teamName'];
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
