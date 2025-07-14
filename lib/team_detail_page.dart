@@ -27,9 +27,17 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
   }
 
   void _navigateToDriverDetail(Map<String, dynamic> driver) {
+    final driverWithTeam = {
+      ...driver,
+      'teamColor': widget.team['teamColor'],
+      'teamName': widget.team['name'],
+      'teamFullName': widget.team['fullName'],
+    };
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => DriverDetailPage(driver: driver)),
+      MaterialPageRoute(
+        builder: (context) => DriverDetailPage(driver: driverWithTeam),
+      ),
     );
   }
 
