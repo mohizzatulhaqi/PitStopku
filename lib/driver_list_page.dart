@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pitstop/driver_detail_page.dart';
 import 'package:pitstop/model/teams_data.dart';
 import 'package:pitstop/theme/custom_colors.dart';
+import 'package:pitstop/widget/scroll_to_top_fab.dart';
 
 class DriverListPage extends StatefulWidget {
   const DriverListPage({Key? key}) : super(key: key);
@@ -14,10 +15,19 @@ class _DriverListPageState extends State<DriverListPage> {
   String searchQuery = '';
   List<Map<String, dynamic>> allDrivers = [];
 
+  late final ScrollController _scrollController;
+
   @override
   void initState() {
     super.initState();
+    _scrollController = ScrollController();
     _loadDrivers();
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
   }
 
   void _loadDrivers() {
@@ -68,7 +78,9 @@ class _DriverListPageState extends State<DriverListPage> {
         ),
         centerTitle: true,
       ),
+      // Use the ScrollController in the ListView.builder
       body: ListView.builder(
+        controller: _scrollController,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         itemCount: filteredDrivers.length + 1,
         itemBuilder: (context, index) {
@@ -280,6 +292,7 @@ class _DriverListPageState extends State<DriverListPage> {
           );
         },
       ),
+      floatingActionButton: ScrollToTopFAB(scrollController: _scrollController),
     );
   }
 }
