@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/pages/driver/driver_detail_page.dart';
 import 'package:pitstop/widget/favorite_toggle_button.dart';
-import 'package:pitstop/driver_detail_page.dart';
+
 
 class TeamDetailPage extends StatefulWidget {
   final Map<String, dynamic> team;

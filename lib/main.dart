@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pitstop/home_page.dart';
+import 'pages/home/home_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
 
 void main() {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/model/teams_data.dart';
 import 'package:pitstop/theme/custom_colors.dart';
-import 'widget/comparison/selection_card.dart';
-import 'widget/comparison/driver_comparison.dart';
-import 'widget/comparison/team_comparison.dart';
+import 'package:pitstop/widget/comparison/driver_comparison.dart';
+import 'package:pitstop/widget/comparison/selection_card.dart';
+import 'package:pitstop/widget/comparison/team_comparison.dart';
 
 class ComparisonPage extends StatefulWidget {
-  const ComparisonPage({super.key});
+  const ComparisonPage({Key? key}) : super(key: key);
 
   @override
   State<ComparisonPage> createState() => _ComparisonPageState();

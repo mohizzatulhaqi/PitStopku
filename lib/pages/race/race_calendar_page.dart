@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/model/race_list.dart';
-import 'package:pitstop/race_detail_page.dart';
+import 'package:pitstop/pages/race/race_detail_page.dart';
+
 import 'package:pitstop/theme/custom_colors.dart';
 import 'package:pitstop/widget/glass_card.dart';
 import 'package:pitstop/widget/scroll_to_top_fab.dart';

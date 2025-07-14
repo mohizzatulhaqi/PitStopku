@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pitstop/driver_detail_page.dart';
 import 'package:pitstop/model/teams_data.dart';
+import 'package:pitstop/pages/driver/driver_detail_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
 import 'package:pitstop/widget/scroll_to_top_fab.dart';
 

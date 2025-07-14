@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pitstop/compare_page.dart';
-import 'package:pitstop/driver_list_page.dart';
-import 'package:pitstop/race_calendar_page.dart';
+import 'package:pitstop/pages/compare_page.dart';
+import 'package:pitstop/pages/driver_list_page.dart';
+import 'package:pitstop/pages/race/race_calendar_page.dart';
+import 'package:pitstop/pages/team_list_page.dart';
 import 'package:pitstop/widget/glass_card.dart';
-import 'package:pitstop/team_list_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
 import 'package:pitstop/widget/scroll_to_top_fab.dart';
 import 'package:flutter/cupertino.dart';
