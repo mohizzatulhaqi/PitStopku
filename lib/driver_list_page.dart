@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pitstop/driver_detail_page.dart';
 import 'package:pitstop/model/teams_data.dart';
 import 'package:pitstop/theme/custom_colors.dart';
 
@@ -260,7 +261,15 @@ class _DriverListPageState extends State<DriverListPage> {
                             Icons.arrow_forward_ios,
                             color: Colors.white,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    DriverDetailPage(driver: driver),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),
