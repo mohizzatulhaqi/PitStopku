@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/compare_page.dart';
 import 'package:pitstop/driver_list_page.dart';
-import 'package:pitstop/race_calendar_page.dart.dart';
+import 'package:pitstop/race_calendar_page.dart';
 import 'package:pitstop/widget/glass_card.dart';
 import 'package:pitstop/team_list_page.dart';
 import 'package:pitstop/theme/custom_colors.dart';
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Experience the thrill of racing',
+                  'Your F1 Partner',
                   style: TextStyle(color: Colors.white70, fontSize: 16),
                 ),
                 const SizedBox(height: 16),
