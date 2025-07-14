@@ -463,75 +463,46 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Gallery',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+        const SizedBox(height: 2),
+        Container(
+          width: double.infinity,
+          height: 200,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: teamColor.withOpacity(0.3)),
           ),
-        ),
-        const SizedBox(height: 16),
-        GestureDetector(
-          onTap: () {
-            _showImageFullScreen(context, galleryImage);
-          },
-          child: Container(
-            width: double.infinity,
-            height: 200,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: teamColor.withOpacity(0.3)),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.network(
-                    galleryImage,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Container(
-                        color: Colors.grey[700],
-                        child: const Icon(
-                          Icons.image,
-                          color: Colors.white,
-                          size: 60,
-                        ),
-                      );
-                    },
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Colors.transparent,
-                          Colors.black.withOpacity(0.3),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 12,
-                    right: 12,
-                    child: Container(
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.6),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                Image.network(
+                  galleryImage,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Container(
+                      color: Colors.grey[700],
                       child: const Icon(
-                        Icons.fullscreen,
+                        Icons.image,
                         color: Colors.white,
-                        size: 20,
+                        size: 60,
                       ),
+                    );
+                  },
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        Colors.black.withOpacity(0.3),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
@@ -549,15 +520,7 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Quote',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 1),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.all(16),
@@ -566,95 +529,55 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: teamColor.withOpacity(0.3)),
           ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
             children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: teamColor.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Icon(Icons.format_quote, color: teamColor, size: 24),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      quoteText,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        height: 1.4,
-                        fontStyle: FontStyle.italic,
-                      ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: teamColor.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                  ],
+                    child: Icon(Icons.format_quote, color: teamColor, size: 24),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          quoteText,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            height: 1.4,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Text(
+                  '- ${widget.driver['name'] ?? 'Unknown Driver'}',
+                  style: TextStyle(
+                    color: teamColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],
           ),
         ),
       ],
-    );
-  }
-
-  void _showImageFullScreen(BuildContext context, String imageUrl) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return Dialog(
-          backgroundColor: Colors.transparent,
-          child: Stack(
-            children: [
-              Center(
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  height: MediaQuery.of(context).size.height * 0.7,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.network(
-                      imageUrl,
-                      fit: BoxFit.contain,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Container(
-                          color: Colors.grey[700],
-                          child: const Icon(
-                            Icons.image,
-                            color: Colors.white,
-                            size: 80,
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: 40,
-                right: 20,
-                child: GestureDetector(
-                  onTap: () => Navigator.of(context).pop(),
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.6),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Icon(
-                      Icons.close,
-                      color: Colors.white,
-                      size: 24,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        );
-      },
     );
   }
 

@@ -9,6 +9,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/redbullracing/2025redbullracinglogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/redbullracing/2025redbullracingcarright.webp',
+    'base': 'Milton Keynes, United Kingdom',
+    'teamChief': 'Laurent Mekies',
+    'technicalChief': 'Pierre Waché',
+    'chassis': 'RB21',
+    'powerUnit': 'Honda RBPT',
+    'firstTeamEntry': '1997',
+    'worldChampionships': 6,
+    'polePositions': 107,
+    'fastestLaps': 98,
+    'description':
+        'Red Bull Racing has been a dominant force in Formula 1 for over a decade, known for their aggressive design philosophy and strong driver pairings. Under the leadership of Christian Horner and the technical brilliance of their design team, they have secured multiple World Constructors\' and Drivers\' Championships.',
     'drivers': [
       {
         'name': 'Max Verstappen',
@@ -16,6 +27,9 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/nl.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/redbullracing/maxver01/2025redbullracingmaxver01right.webp',
+        'galleryImage':
+            'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/content/dam/fom-website/sutton/2022/Bahrain/Thursday/1385967943.webp',
+        'quote': '“I HATE LOSING!”',
         'age': 27,
         'dateOfBirth': '30 September 1997',
         'placeOfBirth': 'Hasselt, Belgium',
@@ -34,6 +48,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/jp.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/redbullracing/yuktsu01/2025redbullracingyuktsu01right.webp',
+        'galleryImage':
+            'https://wallpapersok.com/images/hd/yuki-tsunoda-toyota-super-formula-ls27osi1t52wsehw.jpg', // Placeholder: Image of Yuki in the car.
+        'quote':
+            '"I REALLY LIKE TO BATTLE AND I DON\'T LOSE MUCH WHEN BATTLE HAPPENS.”',
         'age': 25,
         'dateOfBirth': '11 May 2000',
         'placeOfBirth': 'Sagamihara, Japan',
@@ -47,17 +65,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 15,
       },
     ],
-    'base': 'Milton Keynes, United Kingdom',
-    'teamChief': 'Laurent Mekies',
-    'technicalChief': 'Pierre Waché',
-    'chassis': 'RB21',
-    'powerUnit': 'Honda RBPT',
-    'firstTeamEntry': '1997',
-    'worldChampionships': 6,
-    'polePositions': 107,
-    'fastestLaps': 98,
-    'description':
-        'Red Bull Racing has been a dominant force in Formula 1 for over a decade, known for their aggressive design philosophy and strong driver pairings. Under the leadership of Christian Horner and the technical brilliance of their design team, they have secured multiple World Constructors\' and Drivers\' Championships.',
   },
   {
     'name': 'Ferrari',
@@ -67,6 +74,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/ferrari/2025ferrarilogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/ferrari/2025ferraricarright.webp',
+    'base': 'Maranello, Italy',
+    'teamChief': 'Frédéric Vasseur',
+    'technicalChief': 'Loic Serra / Enrico Gualtieri',
+    'chassis': 'SF-25',
+    'powerUnit': 'Ferrari',
+    'firstTeamEntry': '1950',
+    'worldChampionships': 16,
+    'polePositions': 253,
+    'fastestLaps': 260,
+    'description':
+        'Scuderia Ferrari is the oldest and most successful team in Formula 1 history, competing since the inaugural season in 1950. Their rich legacy, passionate Tifosi, and iconic red cars make them a cornerstone of the sport. They consistently aim for championship glory.',
     'drivers': [
       {
         'name': 'Charles Leclerc',
@@ -74,6 +92,9 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/mc.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/ferrari/chalec01/2025ferrarichalec01right.webp',
+        'galleryImage': 'https://wallpapercave.com/wp/wp14347972.jpg',
+        'quote':
+            '"WHATEVER THE POSITION IS AT STAKE, YOU\'VE GOT TO DO YOUR ABSOLUTE BEST AS A DRIVER WHETHER YOU\'RE FIGHTING FOR THE FIFTH, FOURTH OR FIRST POSITION."',
         'age': 27,
         'dateOfBirth': '16 October 1997',
         'placeOfBirth': 'Monte Carlo, Monaco',
@@ -92,6 +113,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/gb.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/ferrari/lewham01/2025ferrarilewham01right.webp',
+        'galleryImage':
+            'https://thumb.tvonenews.com/images/2025/04/08/67f4e95085ed0-lewis-hamilton-saat-gp-china.jpg',
+        'quote':
+            '“DRIVING A SCUDERIA FERRARI HP CAR FOR THE FIRST TIME WAS ONE OF THE BEST FEELINGS OF MY LIFE.”',
         'age': 40,
         'dateOfBirth': '7 January 1985',
         'placeOfBirth': 'Stevenage, United Kingdom',
@@ -105,17 +130,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 32,
       },
     ],
-    'base': 'Maranello, Italy',
-    'teamChief': 'Frédéric Vasseur',
-    'technicalChief': 'Loic Serra / Enrico Gualtieri',
-    'chassis': 'SF-25',
-    'powerUnit': 'Ferrari',
-    'firstTeamEntry': '1950',
-    'worldChampionships': 16,
-    'polePositions': 253,
-    'fastestLaps': 260,
-    'description':
-        'Scuderia Ferrari is the oldest and most successful team in Formula 1 history, competing since the inaugural season in 1950. Their rich legacy, passionate Tifosi, and iconic red cars make them a cornerstone of the sport. They consistently aim for championship glory.',
   },
   {
     'name': 'Mercedes',
@@ -125,6 +139,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/mercedes/2025mercedeslogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/mercedes/2025mercedescarright.webp',
+    'base': 'Brackley, United Kingdom',
+    'teamChief': 'Toto Wolff',
+    'technicalChief': 'James Allison',
+    'chassis': 'W16',
+    'powerUnit': 'Mercedes',
+    'firstTeamEntry': '1970',
+    'worldChampionships': 8,
+    'polePositions': 134,
+    'fastestLaps': 100,
+    'description':
+        'Mercedes-AMG PETRONAS F1 Team dominated the hybrid era of Formula 1, securing an unprecedented run of Constructors\' Championships. With state-of-the-art facilities and a strong leadership, they continue to be a top contender in the sport, pushing boundaries in technology and performance.',
     'drivers': [
       {
         'name': 'George Russell',
@@ -132,6 +157,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/gb.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/mercedes/georus01/2025mercedesgeorus01right.webp',
+        'galleryImage':
+            'https://cdn-wp.thesportsrush.com/2024/06/02fad9e6-untitled-design-8.jpg',
+        'quote':
+            '“ON GEORGE, YOU CAN RELY ON HIM WHEN IT COMES TO LAP TIMES AND RACING, SO SPIRITS ARE HIGH.”',
         'age': 27,
         'dateOfBirth': '15 February 1998',
         'placeOfBirth': 'King\'s Lynn, United Kingdom',
@@ -150,6 +179,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/it.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/mercedes/andant01/2025mercedesandant01right.webp',
+        'galleryImage':
+            'https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/83/2025/05/03/kimi-235082625.jpg',
+        'quote':
+            '“RACING FOR MERCEDES IS A BIG RESPONSIBILITY, BUT AT THE SAME TIME IT’S A GREAT OPPORTUNITY AND A PRIVILEGE.”',
         'age': 19,
         'dateOfBirth': '25 August 2006',
         'placeOfBirth': 'Bologna, Italy',
@@ -163,17 +196,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 4,
       },
     ],
-    'base': 'Brackley, United Kingdom',
-    'teamChief': 'Toto Wolff',
-    'technicalChief': 'James Allison',
-    'chassis': 'W16',
-    'powerUnit': 'Mercedes',
-    'firstTeamEntry': '1970',
-    'worldChampionships': 8,
-    'polePositions': 134,
-    'fastestLaps': 100,
-    'description':
-        'Mercedes-AMG PETRONAS F1 Team dominated the hybrid era of Formula 1, securing an unprecedented run of Constructors\' Championships. With state-of-the-art facilities and a strong leadership, they continue to be a top contender in the sport, pushing boundaries in technology and performance.',
   },
   {
     'name': 'McLaren',
@@ -183,6 +205,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/mclaren/2025mclarenlogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/mclaren/2025mclarencarright.webp',
+    'base': 'Woking, United Kingdom',
+    'teamChief': 'Andrea Stella',
+    'technicalChief': 'Peter Prodromou / Neil Houldey',
+    'chassis': 'MCL39',
+    'powerUnit': 'Mercedes',
+    'firstTeamEntry': '1966',
+    'worldChampionships': 9,
+    'polePositions': 171,
+    'fastestLaps': 161,
+    'description':
+        'McLaren is one of the most iconic names in Formula 1, with a rich history of success and innovation. Known for their distinctive orange livery, the team is on a journey to return to championship-winning form with a talented driver lineup and renewed focus.',
     'drivers': [
       {
         'name': 'Oscar Piastri',
@@ -190,6 +223,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/au.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/mclaren/oscpia01/2025mclarenoscpia01right.webp',
+        'galleryImage':
+            'https://driver61.com/wp-content/uploads/2025/04/oscar-piastri.jpg',
+        'quote':
+            '“I LIKE CARS, I LIKE RACING, BUT I THINK THE COMPETITION SIDE OF THINGS IS PROBABLY THE NUMBER ONE THING.”',
         'age': 24,
         'dateOfBirth': '6 April 2001',
         'placeOfBirth': 'Melbourne, Australia',
@@ -208,6 +245,9 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/gb.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/mclaren/lannor01/2025mclarenlannor01right.webp',
+        'galleryImage':
+            'https://imgcdn.espos.id/@espos/images/2025/06/20250630001127-lando-norris.jpg?quality=60',
+        'quote': '“I\'M READY TO BRING THE FIGHT TO EVERYONE.”',
         'age': 25,
         'dateOfBirth': '13 November 1999',
         'placeOfBirth': 'Bristol, United Kingdom',
@@ -221,17 +261,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 12,
       },
     ],
-    'base': 'Woking, United Kingdom',
-    'teamChief': 'Andrea Stella',
-    'technicalChief': 'Peter Prodromou / Neil Houldey',
-    'chassis': 'MCL39',
-    'powerUnit': 'Mercedes',
-    'firstTeamEntry': '1966',
-    'worldChampionships': 9,
-    'polePositions': 171,
-    'fastestLaps': 161,
-    'description':
-        'McLaren is one of the most iconic names in Formula 1, with a rich history of success and innovation. Known for their distinctive orange livery, the team is on a journey to return to championship-winning form with a talented driver lineup and renewed focus.',
   },
   {
     'name': 'Aston Martin',
@@ -241,6 +270,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/astonmartin/2025astonmartinlogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/astonmartin/2025astonmartincarright.webp',
+    'base': 'Silverstone, United Kingdom',
+    'teamChief': 'Andy Cowell',
+    'technicalChief': 'Eric Blandin',
+    'chassis': 'AMR25',
+    'powerUnit': 'Mercedes',
+    'firstTeamEntry': '1959',
+    'worldChampionships': 0,
+    'polePositions': 1,
+    'fastestLaps': 0,
+    'description':
+        'Aston Martin Aramco F1 Team, with its iconic British racing green, is an ambitious team striving for success in Formula 1. With significant investment and a growing infrastructure, they are aiming to become a front-running contender in the coming years.',
     'drivers': [
       {
         'name': 'Lance Stroll',
@@ -248,6 +288,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/ca.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/astonmartin/lanstr01/2025astonmartinlanstr01right.webp',
+        'galleryImage':
+            'https://gpticketstore.vshcdn.net/uploads/images/12178/teams-lineups-lance-stroll-f1-aston-martin.jpg',
+        'quote':
+            '“WE’VE GROWN SO MUCH AS A TEAM AND THERE’S STILL SO MUCH MORE TO LOOK FORWARD TO.”',
         'age': 26,
         'dateOfBirth': '29 October 1999',
         'placeOfBirth': 'Montreal, Canada',
@@ -266,6 +310,9 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/es.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/astonmartin/feralo01/2025astonmartinferalo01right.webp',
+        'galleryImage':
+            'https://assets.astonmartinf1.com/public/cms/7nnVwrWQkv8jbcqgrF95GO/fff632110baca444c02c07f8ebb0d753/Fernando_page_header_image.jpg?&h=849&w=1440&fm=jpg&fit=thumb',
+        'quote': '“I NEVER REGRET ANYTHING.”',
         'age': 44,
         'dateOfBirth': '29 July 1981',
         'placeOfBirth': 'Oviedo, Spain',
@@ -279,17 +326,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 81,
       },
     ],
-    'base': 'Silverstone, United Kingdom',
-    'teamChief': 'Andy Cowell',
-    'technicalChief': 'Eric Blandin',
-    'chassis': 'AMR25',
-    'powerUnit': 'Mercedes',
-    'firstTeamEntry': '1959',
-    'worldChampionships': 0,
-    'polePositions': 1,
-    'fastestLaps': 0,
-    'description':
-        'Aston Martin Aramco F1 Team, with its iconic British racing green, is an ambitious team striving for success in Formula 1. With significant investment and a growing infrastructure, they are aiming to become a front-running contender in the coming years.',
   },
   {
     'name': 'Alpine',
@@ -299,6 +335,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/alpine/2025alpinelogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/alpine/2025alpinecarright.webp',
+    'base': 'Enstone, United Kingdom',
+    'teamChief': 'Flavio Briatore',
+    'technicalChief': 'David Sanchez',
+    'chassis': 'A525',
+    'powerUnit': 'Renault',
+    'firstTeamEntry': '1986',
+    'worldChampionships': 2,
+    'polePositions': 20,
+    'fastestLaps': 16,
+    'description':
+        'BWT Alpine F1 Team, representing the Renault Group, embodies French motorsport heritage. They are a constructor with a strong focus on developing their own power units and chassis, aiming to climb the ranks and consistently challenge for podiums.',
     'drivers': [
       {
         'name': 'Pierre Gasly',
@@ -306,6 +353,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/fr.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/alpine/piegas01/2025alpinepiegas01right.webp',
+        'galleryImage':
+            'https://cdn-8.motorsport.com/images/amp/6zQKZ8eY/s1000/pierre-gasly-alpine.jpg',
+        'quote':
+            '“THE MOMENT I LOVE THE MOST IS WHENEVER I GET IN THAT CAR, FIGHTING THE BEST 19 DRIVERS IN THE WORLD, AND THIS EXERCISE OF BEATING THEM.”',
         'age': 29,
         'dateOfBirth': '7 February 1996',
         'placeOfBirth': 'Rouen, France',
@@ -324,6 +375,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/ar.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/alpine/fracol01/2025alpinefracol01right.webp',
+        'galleryImage':
+            'https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2025/06/26152918/franco-colapinto-alpine-f1-2025-canadian-grand-prix.png',
+        'quote':
+            '“I WILL GIVE IT MY ALL TO DELIVER THE BEST POSSIBLE RESULTS.”',
         'age': 21,
         'dateOfBirth': '27 May 2003',
         'placeOfBirth': 'Buenos Aires, Argentina',
@@ -337,17 +392,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 3,
       },
     ],
-    'base': 'Enstone, United Kingdom',
-    'teamChief': 'Flavio Briatore',
-    'technicalChief': 'David Sanchez',
-    'chassis': 'A525',
-    'powerUnit': 'Renault',
-    'firstTeamEntry': '1986',
-    'worldChampionships': 2,
-    'polePositions': 20,
-    'fastestLaps': 16,
-    'description':
-        'BWT Alpine F1 Team, representing the Renault Group, embodies French motorsport heritage. They are a constructor with a strong focus on developing their own power units and chassis, aiming to climb the ranks and consistently challenge for podiums.',
   },
   {
     'name': 'Williams',
@@ -357,6 +401,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/williams/2025williamslogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/williams/2025williamscarright.webp',
+    'base': 'Grove, United Kingdom',
+    'teamChief': 'James Vowles',
+    'technicalChief': 'Pat Fry',
+    'chassis': 'FW47',
+    'powerUnit': 'Mercedes',
+    'firstTeamEntry': '1978',
+    'worldChampionships': 9,
+    'polePositions': 128,
+    'fastestLaps': 133,
+    'description':
+        'Williams Racing is one of the most successful and historically significant teams in Formula 1. After challenging years, they are undergoing a rebuilding phase, aiming to restore their former glory and become a competitive force once again under new leadership.',
     'drivers': [
       {
         'name': 'Alexander Albon',
@@ -364,6 +419,9 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/th.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/williams/alealb01/2025williamsalealb01right.webp',
+        'galleryImage':
+            'https://cdn-2.motorsport.com/images/amp/6gp9Rya0/s6/alex-albon-williams-racing.jpg',
+        'quote': '“I’M READY TO WIN RACES, TO FIGHT FOR A CHAMPIONSHIP.”',
         'age': 29,
         'dateOfBirth': '23 March 1996',
         'placeOfBirth': 'London, United Kingdom',
@@ -382,6 +440,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/es.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/williams/carsai01/2025williamscarsai01right.webp',
+        'galleryImage':
+            'https://cdn.rri.co.id/berita/Takengon/o/1741507861221-Sainz/dul3tdqaguwkrrv.jpeg',
+        'quote':
+            '“I ALWAYS PERFORM AT MY BEST WHEN I JUST DON’T CARE ABOUT THE SITUATION AND HAVE A SINGLE MENTALITY THAT IT’S JUST GO FOR IT.”',
         'age': 31,
         'dateOfBirth': '1 September 1994',
         'placeOfBirth': 'Madrid, Spain',
@@ -395,17 +457,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 40,
       },
     ],
-    'base': 'Grove, United Kingdom',
-    'teamChief': 'James Vowles',
-    'technicalChief': 'Pat Fry',
-    'chassis': 'FW47',
-    'powerUnit': 'Mercedes',
-    'firstTeamEntry': '1978',
-    'worldChampionships': 9,
-    'polePositions': 128,
-    'fastestLaps': 133,
-    'description':
-        'Williams Racing is one of the most successful and historically significant teams in Formula 1. After challenging years, they are undergoing a rebuilding phase, aiming to restore their former glory and become a competitive force once again under new leadership.',
   },
   {
     'name': 'Racing Bulls',
@@ -415,6 +466,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/racingbulls/2025racingbullslogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/racingbulls/2025racingbullscarright.webp',
+    'base': 'Faenza, Italy',
+    'teamChief': 'Alan Permane',
+    'technicalChief': 'Tim Goss',
+    'chassis': 'VCARB 02',
+    'powerUnit': 'Honda RBPT',
+    'firstTeamEntry': '1985',
+    'worldChampionships': 0,
+    'polePositions': 1,
+    'fastestLaps': 0,
+    'description':
+        'Visa Cash App RB Formula One Team (formerly AlphaTauri and Toro Rosso) serves as Red Bull\'s sister team, providing a platform for young drivers to develop their skills. They aim to be a strong midfield contender, often leveraging synergies with Red Bull Racing.',
     'drivers': [
       {
         'name': 'Liam Lawson',
@@ -422,6 +484,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/nz.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/racingbulls/lialaw01/2025racingbullslialaw01right.webp',
+        'galleryImage':
+            'https://motorsportmagazine.b-cdn.net/wp-content/uploads/2023/09/Liam-Lawson-Red-Bull-scaled.jpg',
+        'quote':
+            '“I\'M NOT HERE TO MAKE FRIENDS. I\'M HERE TO WIN - THAT\'S WHAT I\'M FOCUSED ON DOING.”',
         'age': 23,
         'dateOfBirth': '11 February 2002',
         'placeOfBirth': 'Hastings, New Zealand',
@@ -440,6 +506,9 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/fr.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/racingbulls/isahad01/2025racingbullsisahad01right.webp',
+        'galleryImage':
+            'https://media.formula1.com/image/upload/t_16by9North/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2024/Formula_1_Testing_in_Abu_Dhabi/2189182469.webp',
+        'quote': '“I’M SOMEONE WHO FOUGHT HIS WAY TO F1 THE HARD WAY.”',
         'age': 21,
         'dateOfBirth': '28 September 2004',
         'placeOfBirth': 'Paris, France',
@@ -453,17 +522,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 1,
       },
     ],
-    'base': 'Faenza, Italy',
-    'teamChief': 'Alan Permane',
-    'technicalChief': 'Tim Goss',
-    'chassis': 'VCARB 02',
-    'powerUnit': 'Honda RBPT',
-    'firstTeamEntry': '1985',
-    'worldChampionships': 0,
-    'polePositions': 1,
-    'fastestLaps': 0,
-    'description':
-        'Visa Cash App RB Formula One Team (formerly AlphaTauri and Toro Rosso) serves as Red Bull\'s sister team, providing a platform for young drivers to develop their skills. They aim to be a strong midfield contender, often leveraging synergies with Red Bull Racing.',
   },
   {
     'name': 'Kick Sauber',
@@ -473,6 +531,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/kicksauber/2025kicksauberlogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/kicksauber/2025kicksaubercarright.webp',
+    'base': 'Hinwil, Switzerland',
+    'teamChief': 'Jonathan Wheatley',
+    'technicalChief': 'James Key',
+    'chassis': 'C45',
+    'powerUnit': 'Ferrari',
+    'firstTeamEntry': '1993',
+    'worldChampionships': 0,
+    'polePositions': 1,
+    'fastestLaps': 0,
+    'description':
+        'Stake F1 Team Kick Sauber, with its long-standing presence in Formula 1 as Sauber, is known for its strong technical foundation and development of young talent. They are currently transitioning and looking to improve their performance ahead of Audi\'s full entry into the sport.',
     'drivers': [
       {
         'name': 'Nico Hulkenberg',
@@ -480,6 +549,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/de.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/kicksauber/nichul01/2025kicksaubernichul01right.webp',
+        'galleryImage':
+            'https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2024/Formula_1_Testing_in_Abu_Dhabi/2189136953.webp',
+        'quote':
+            '“YOU’VE GOT TO BE THERE WHEN THE OPPORTUNITY PRESENTS ITSELF, BECAUSE THE RACE IS NOT OVER UNTIL IT’S OVER.”',
         'age': 38,
         'dateOfBirth': '19 August 1987',
         'placeOfBirth': 'Emmerich am Rhein, Germany',
@@ -498,6 +571,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/br.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/kicksauber/gabbor01/2025kicksaubergabbor01right.webp',
+        'galleryImage':
+            'https://media.formula1.com/image/upload/t_16by9South/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2024/Formula_1_Testing_in_Abu_Dhabi/2189150810.webp',
+        'quote':
+            '“I WANT TO BE ABLE TO FIGHT FOR THINGS AND TO MAKE MY COUNTRY PROUD OF EVERYTHING I CAN ACHIEVE.”',
         'age': 20,
         'dateOfBirth': '14 October 2004',
         'placeOfBirth': 'São Paulo, Brazil',
@@ -511,17 +588,6 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 3,
       },
     ],
-    'base': 'Hinwil, Switzerland',
-    'teamChief': 'Jonathan Wheatley',
-    'technicalChief': 'James Key',
-    'chassis': 'C45',
-    'powerUnit': 'Ferrari',
-    'firstTeamEntry': '1993',
-    'worldChampionships': 0,
-    'polePositions': 1,
-    'fastestLaps': 0,
-    'description':
-        'Stake F1 Team Kick Sauber, with its long-standing presence in Formula 1 as Sauber, is known for its strong technical foundation and development of young talent. They are currently transitioning and looking to improve their performance ahead of Audi\'s full entry into the sport.',
   },
   {
     'name': 'Haas',
@@ -531,6 +597,17 @@ final List<Map<String, dynamic>> teams = [
         'https://media.formula1.com/image/upload/c_lfill,w_48/q_auto/v1740000000/common/f1/2025/haas/2025haaslogowhite.webp',
     'carUrl':
         'https://media.formula1.com/image/upload/c_lfill,w_800/q_auto/v1740000000/common/f1/2025/haas/2025haascarright.webp',
+    'base': 'Kannapolis, United States',
+    'teamChief': 'Ayao Komatsu',
+    'technicalChief': 'Andrea de Zordo',
+    'chassis': 'VF-25',
+    'powerUnit': 'Ferrari',
+    'firstTeamEntry': '2016',
+    'worldChampionships': 0,
+    'polePositions': 1,
+    'fastestLaps': 0,
+    'description':
+        'MoneyGram Haas F1 Team is the only American-owned team on the Formula 1 grid. They operate with a unique model, relying heavily on partnerships with Ferrari for power units and other components. They aim to be a consistent points-scoring team and challenge the midfield.',
     'drivers': [
       {
         'name': 'Esteban Ocon',
@@ -538,6 +615,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/fr.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/haas/estoco01/2025haasestoco01right.webp',
+        'galleryImage':
+            'https://media.formula1.com/image/upload/t_16by9North/c_lfill,w_3392/q_auto/v1740000000/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_1/2202063861.webp',
+        'quote':
+            '“TOUGH RACING IS ALWAYS COOL TO ME. RACING SIDE-BY-SIDE, BEING VERY CLOSE, THAT’S WHAT RACING IS ALL ABOUT.”',
         'age': 28,
         'dateOfBirth': '17 September 1996',
         'placeOfBirth': 'Évreux, France',
@@ -556,6 +637,10 @@ final List<Map<String, dynamic>> teams = [
         'country': 'https://flagcdn.com/w40/gb.png',
         'imageUrl':
             'https://media.formula1.com/image/upload/c_lfill,w_440/q_auto/v1740000000/common/f1/2025/haas/olibea01/2025haasolibea01right.webp',
+        'galleryImage':
+            'https://cdn-5.motorsport.com/images/amp/6VRQae46/s1000/oliver-bearman-reserve-driver-.jpg',
+        'quote':
+            '“I’M A COMPETITIVE GUY, I LIKE TO BE GOOD AT EVERYTHING I DO.”',
         'age': 20,
         'dateOfBirth': '8 May 2005',
         'placeOfBirth': 'Chelmsford, United Kingdom',
@@ -569,16 +654,5 @@ final List<Map<String, dynamic>> teams = [
         'dnfs': 1,
       },
     ],
-    'base': 'Kannapolis, United States',
-    'teamChief': 'Ayao Komatsu',
-    'technicalChief': 'Andrea de Zordo',
-    'chassis': 'VF-25',
-    'powerUnit': 'Ferrari',
-    'firstTeamEntry': '2016',
-    'worldChampionships': 0,
-    'polePositions': 1,
-    'fastestLaps': 0,
-    'description':
-        'MoneyGram Haas F1 Team is the only American-owned team on the Formula 1 grid. They operate with a unique model, relying heavily on partnerships with Ferrari for power units and other components. They aim to be a consistent points-scoring team and challenge the midfield.',
   },
 ];
