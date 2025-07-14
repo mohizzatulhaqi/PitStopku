@@ -105,52 +105,66 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
                       ),
                     ),
                   ),
-                  if (widget.team['carUrl'] != null)
-                    Positioned(
-                      right: 50,
-                      bottom: 20,
-                      child: Transform.scale(
-                        scale: 1.2,
-                        child: Image.network(
-                          widget.team['carUrl'],
-                          fit: BoxFit.contain,
-                          width: 300,
-                          height: 150,
-                          errorBuilder: (context, error, stackTrace) {
-                            return const SizedBox();
-                          },
-                        ),
-                      ),
-                    ),
-                  if (widget.team['logoUrl'] != null)
-                    Positioned(
-                      top: 100,
-                      left: 150,
-                      child: Hero(
-                        tag: 'teamLogo_${widget.team['name']}',
-                        child: Container(
-                          width: 90,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: Colors.white.withOpacity(0.2),
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: Image.network(
-                              widget.team['logoUrl'],
-                              fit: BoxFit.contain,
-                              errorBuilder: (context, error, stackTrace) {
-                                return const Icon(
-                                  Icons.flag,
-                                  color: Colors.white,
-                                );
-                              },
+                  LayoutBuilder(
+                    builder: (context, constraints) {
+                      return Stack(
+                        children: [
+                          if (widget.team['carUrl'] != null)
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 20),
+                                child: Transform.scale(
+                                  scale: 1.2,
+                                  child: Image.network(
+                                    widget.team['carUrl'],
+                                    fit: BoxFit.contain,
+                                    width: 350,
+                                    height: 170,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return const SizedBox();
+                                    },
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
+
+                          if (widget.team['logoUrl'] != null)
+                            Align(
+                              alignment: Alignment.topCenter,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 40),
+                                child: Hero(
+                                  tag: 'teamLogo_${widget.team['name']}',
+                                  child: Container(
+                                    width: 90,
+                                    height: 90,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16),
+                                      color: Colors.white.withOpacity(0.2),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(16),
+                                      child: Image.network(
+                                        widget.team['logoUrl'],
+                                        fit: BoxFit.contain,
+                                        errorBuilder:
+                                            (context, error, stackTrace) {
+                                              return const Icon(
+                                                Icons.flag,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                        ],
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
