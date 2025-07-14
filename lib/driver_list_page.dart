@@ -44,6 +44,13 @@ class _DriverListPageState extends State<DriverListPage> {
     }
   }
 
+  void _navigateToDriverDetail(Map<String, dynamic> driver) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => DriverDetailPage(driver: driver)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +71,6 @@ class _DriverListPageState extends State<DriverListPage> {
       body: ListView.builder(
         controller: _scrollController,
         padding: const EdgeInsets.symmetric(horizontal: 16),
-
         itemCount: allDrivers.length + 1,
         itemBuilder: (context, index) {
           if (index == 0) {
@@ -82,7 +88,6 @@ class _DriverListPageState extends State<DriverListPage> {
           }
 
           final driverIndex = index - 1;
-
           final driver = allDrivers[driverIndex];
           final teamColor = driver['teamColor'] as Color;
 
@@ -122,97 +127,100 @@ class _DriverListPageState extends State<DriverListPage> {
                 margin: const EdgeInsets.only(bottom: 12),
                 child: Stack(
                   children: [
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: teamColor.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: teamColor.withOpacity(0.3)),
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: teamColor,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Center(
-                              child: Text(
-                                driver['number']?.toString() ?? '?',
-                                style: const TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
+                    GestureDetector(
+                      onTap: () => _navigateToDriverDetail(driver),
+                      child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: teamColor.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: teamColor.withOpacity(0.3)),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                color: teamColor,
+                                borderRadius: BorderRadius.circular(8),
                               ),
-                            ),
-                          ),
-                          const SizedBox(width: 16),
-
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  driver['name']?.toString() ??
-                                      'Unknown Driver',
+                              child: Center(
+                                child: Text(
+                                  driver['number']?.toString() ?? '?',
                                   style: const TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
                                 ),
-                                const SizedBox(height: 4),
-
-                                Text(
-                                  driver['teamName']?.toString() ?? '',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: teamColor,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-
-                                if (driver['country'] != null)
-                                  Container(
-                                    width: 25,
-                                    height: 25,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: Colors.white,
-                                        width: 2,
-                                      ),
-                                    ),
-                                    child: ClipOval(
-                                      child: Image.network(
-                                        driver['country'],
-                                        fit: BoxFit.cover,
-                                        errorBuilder:
-                                            (context, error, stackTrace) {
-                                              return Container(
-                                                decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                  color: Colors.grey[700],
-                                                ),
-                                                child: const Icon(
-                                                  Icons.flag,
-                                                  color: Colors.white70,
-                                                  size: 16,
-                                                ),
-                                              );
-                                            },
-                                      ),
-                                    ),
-                                  ),
-                              ],
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(width: 16),
+
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    driver['name']?.toString() ??
+                                        'Unknown Driver',
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+
+                                  Text(
+                                    driver['teamName']?.toString() ?? '',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: teamColor,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+
+                                  if (driver['country'] != null)
+                                    Container(
+                                      width: 25,
+                                      height: 25,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: Colors.white,
+                                          width: 2,
+                                        ),
+                                      ),
+                                      child: ClipOval(
+                                        child: Image.network(
+                                          driver['country'],
+                                          fit: BoxFit.cover,
+                                          errorBuilder:
+                                              (context, error, stackTrace) {
+                                                return Container(
+                                                  decoration: BoxDecoration(
+                                                    shape: BoxShape.circle,
+                                                    color: Colors.grey[700],
+                                                  ),
+                                                  child: const Icon(
+                                                    Icons.flag,
+                                                    color: Colors.white70,
+                                                    size: 16,
+                                                  ),
+                                                );
+                                              },
+                                        ),
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
@@ -246,6 +254,7 @@ class _DriverListPageState extends State<DriverListPage> {
                           ),
                         ),
                       ),
+
                     Positioned(
                       right: 10,
                       top: 0,
@@ -256,15 +265,7 @@ class _DriverListPageState extends State<DriverListPage> {
                             Icons.arrow_forward_ios,
                             color: Colors.white,
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    DriverDetailPage(driver: driver),
-                              ),
-                            );
-                          },
+                          onPressed: () => _navigateToDriverDetail(driver),
                         ),
                       ),
                     ),
