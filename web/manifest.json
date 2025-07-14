@@ -1,6 +1,6 @@
 {
-    "name": "pitstop",
-    "short_name": "pitstop",
+    "name": "PitStopku",
+    "short_name": "PitStopku",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
