@@ -1,16 +1,54 @@
-# pitstop
+# 🏁 PitStopku
 
-A new Flutter project.
+A beautiful and modern Flutter app for Formula 1 fans! Get all the info about teams, drivers, race calendar, and compare stats in a stylish, responsive, and cross-platform experience.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
+- **Home Dashboard**: Quick access to all F1 essentials
+- **Teams & Drivers**: Browse, search, and view detailed info
+- **Race Calendar**: See all Grand Prix 2025 schedules
+- **Comparison**: Compare drivers or teams side by side
+- **Favorites**: Mark your favorite teams and drivers
+- **Responsive UI**: Looks great on mobile & web
+- **Hero Animations**: Smooth transitions between list and detail
+- **Dark Theme**: Eye-friendly and modern
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ⚡ Getting Started
+1. **Clone this repo**
+   ```bash
+   git clone <repo-url>
+   cd pitstop
+   ```
+2. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
+3. **Run the app**
+   ```bash
+   flutter run
+   ```
+   or for web:
+   ```bash
+   flutter run -d chrome
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## ✨ Preview
+
+- Home, Teams, Drivers, Race Calendar, and Comparison pages
+- Smooth navigation and beautiful transitions
+- Fully responsive for mobile and web
+
+---
+
+## 👤 Author
+- [mohizzatulhaqi](https://github.com/mohizzatulhaqi)
+
+---
+
+## 📄 License
+MIT
