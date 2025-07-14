@@ -129,30 +129,33 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                     Positioned(
                       right: 0,
                       bottom: 0,
-                      child: Container(
-                        width: 280,
-                        height: 280,
-                        child: ClipRRect(
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20),
-                          ),
-                          child: Image.network(
-                            widget.driver['imageUrl'],
-                            fit: BoxFit.cover,
-                            alignment: const Alignment(0.0, -1.0),
-                            errorBuilder: (context, error, stackTrace) {
-                              return Container(
-                                width: 280,
-                                height: 280,
-                                color: Colors.grey[700],
-                                child: const Icon(
-                                  Icons.person,
-                                  color: Colors.white,
-                                  size: 80,
-                                ),
-                              );
-                            },
+                      child: Hero(
+                        tag: 'driverImage_${widget.driver['name']}',
+                        child: Container(
+                          width: 280,
+                          height: 280,
+                          child: ClipRRect(
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            ),
+                            child: Image.network(
+                              widget.driver['imageUrl'],
+                              fit: BoxFit.cover,
+                              alignment: const Alignment(0.0, -1.0),
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  width: 280,
+                                  height: 280,
+                                  color: Colors.grey[700],
+                                  child: const Icon(
+                                    Icons.person,
+                                    color: Colors.white,
+                                    size: 80,
+                                  ),
+                                );
+                              },
+                            ),
                           ),
                         ),
                       ),

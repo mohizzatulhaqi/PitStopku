@@ -99,20 +99,27 @@ class _TeamsListPageState extends State<TeamsListPage> {
                           ),
                           Align(
                             alignment: Alignment.topRight,
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Colors.white.withOpacity(0.2),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.network(
-                                  team['logoUrl'],
-                                  fit: BoxFit.contain,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      Icon(Icons.flag, color: Colors.white),
+                            child: Hero(
+                              tag: 'teamLogo_${team['name']}',
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.2),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.network(
+                                    team['logoUrl'],
+                                    fit: BoxFit.contain,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return const Icon(
+                                        Icons.flag,
+                                        color: Colors.white,
+                                      );
+                                    },
+                                  ),
                                 ),
                               ),
                             ),

@@ -126,24 +126,27 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
                     Positioned(
                       top: 100,
                       left: 150,
-                      child: Container(
-                        width: 90,
-                        height: 90,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          color: Colors.white.withOpacity(0.2),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: Image.network(
-                            widget.team['logoUrl'],
-                            fit: BoxFit.contain,
-                            errorBuilder: (context, error, stackTrace) {
-                              return const Icon(
-                                Icons.flag,
-                                color: Colors.white,
-                              );
-                            },
+                      child: Hero(
+                        tag: 'teamLogo_${widget.team['name']}',
+                        child: Container(
+                          width: 90,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.white.withOpacity(0.2),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Image.network(
+                              widget.team['logoUrl'],
+                              fit: BoxFit.contain,
+                              errorBuilder: (context, error, stackTrace) {
+                                return const Icon(
+                                  Icons.flag,
+                                  color: Colors.white,
+                                );
+                              },
+                            ),
                           ),
                         ),
                       ),
@@ -341,29 +344,32 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
                                 Positioned(
                                   top: 0,
                                   right: 0,
-                                  child: ClipRRect(
-                                    borderRadius: const BorderRadius.only(
-                                      topRight: Radius.circular(12),
-                                      bottomRight: Radius.circular(12),
-                                    ),
-                                    child: Image.network(
-                                      driverData['imageUrl'],
-                                      width: 140,
-                                      height: 120,
-                                      fit: BoxFit.cover,
-                                      alignment: const Alignment(0.0, -1.0),
-                                      errorBuilder:
-                                          (context, error, stackTrace) {
-                                            return Container(
-                                              width: 130,
-                                              height: 102,
-                                              color: Colors.grey,
-                                              child: const Icon(
-                                                Icons.person,
-                                                color: Colors.white,
-                                              ),
-                                            );
-                                          },
+                                  child: Hero(
+                                    tag: 'driverImage_${driverData['name']}',
+                                    child: ClipRRect(
+                                      borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(12),
+                                        bottomRight: Radius.circular(12),
+                                      ),
+                                      child: Image.network(
+                                        driverData['imageUrl'],
+                                        width: 140,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                        alignment: const Alignment(0.0, -1.0),
+                                        errorBuilder:
+                                            (context, error, stackTrace) {
+                                              return Container(
+                                                width: 130,
+                                                height: 102,
+                                                color: Colors.grey,
+                                                child: const Icon(
+                                                  Icons.person,
+                                                  color: Colors.white,
+                                                ),
+                                              );
+                                            },
+                                      ),
                                     ),
                                   ),
                                 ),
