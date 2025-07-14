@@ -28,7 +28,7 @@ class GlassCard extends StatelessWidget {
 class DriverDetailPage extends StatefulWidget {
   final Map<String, dynamic> driver;
 
-  const DriverDetailPage({super.key, required this.driver});
+  const DriverDetailPage({super.key, required this.driver, required});
 
   @override
   State<DriverDetailPage> createState() => _DriverDetailPageState();

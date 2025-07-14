@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pitstop/widget/favorite_toggle_button.dart';
+import 'package:pitstop/driver_detail_page.dart';
 
 class TeamDetailPage extends StatefulWidget {
   final Map<String, dynamic> team;
@@ -16,7 +17,6 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
   @override
   void initState() {
     super.initState();
-
     _isTeamFavorited = false;
   }
 
@@ -24,6 +24,13 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
     setState(() {
       _isTeamFavorited = newFavoriteStatus;
     });
+  }
+
+  void _navigateToDriverDetail(Map<String, dynamic> driver) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => DriverDetailPage(driver: driver)),
+    );
   }
 
   @override
@@ -220,138 +227,155 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
                   if (widget.team['drivers'] != null &&
                       widget.team['drivers'] is List) ...[
                     ...(widget.team['drivers'] as List).map<Widget>((driver) {
-                      return Container(
-                        margin: const EdgeInsets.only(bottom: 12),
-                        child: Stack(
-                          children: [
-                            Container(
-                              width: double.infinity,
-                              padding: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                color: teamColor.withOpacity(0.3),
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(
+                      final driverData = driver as Map<String, dynamic>;
+
+                      return GestureDetector(
+                        onTap: () => _navigateToDriverDetail(driverData),
+                        child: Container(
+                          margin: const EdgeInsets.only(bottom: 12),
+                          child: Stack(
+                            children: [
+                              Container(
+                                width: double.infinity,
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
                                   color: teamColor.withOpacity(0.3),
-                                ),
-                              ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 60,
-                                    height: 60,
-                                    decoration: BoxDecoration(
-                                      color: teamColor,
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        (driver is Map &&
-                                                driver['number'] != null)
-                                            ? driver['number'].toString()
-                                            : '?',
-                                        style: const TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(
+                                    color: teamColor.withOpacity(0.3),
                                   ),
-                                  const SizedBox(width: 16),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          (driver is Map &&
-                                                  driver['name'] != null)
-                                              ? driver['name'].toString()
-                                              : 'Unknown Driver',
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      width: 60,
+                                      height: 60,
+                                      decoration: BoxDecoration(
+                                        color: teamColor,
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          driverData['number']?.toString() ??
+                                              '?',
                                           style: const TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 24,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         ),
-                                        const SizedBox(height: 4),
-                                        if (driver is Map &&
-                                            driver['country'] != null)
-                                          Container(
-                                            width: 25,
-                                            height: 25,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                color: Colors.white,
-                                                width: 2,
-                                              ),
-                                            ),
-                                            child: ClipOval(
-                                              child: Image.network(
-                                                driver['country'],
-                                                fit: BoxFit.cover,
-                                                errorBuilder:
-                                                    (
-                                                      context,
-                                                      error,
-                                                      stackTrace,
-                                                    ) {
-                                                      return Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                              shape: BoxShape
-                                                                  .circle,
-                                                              color: Colors
-                                                                  .grey[700],
-                                                            ),
-                                                        child: const Icon(
-                                                          Icons.flag,
-                                                          color: Colors.white70,
-                                                          size: 16,
-                                                        ),
-                                                      );
-                                                    },
-                                              ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 16),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            driverData['name']?.toString() ??
+                                                'Unknown Driver',
+                                            style: const TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
                                             ),
                                           ),
-                                      ],
+                                          const SizedBox(height: 4),
+                                          if (driverData['country'] != null)
+                                            Container(
+                                              width: 25,
+                                              height: 25,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                  color: Colors.white,
+                                                  width: 2,
+                                                ),
+                                              ),
+                                              child: ClipOval(
+                                                child: Image.network(
+                                                  driverData['country'],
+                                                  fit: BoxFit.cover,
+                                                  errorBuilder:
+                                                      (
+                                                        context,
+                                                        error,
+                                                        stackTrace,
+                                                      ) {
+                                                        return Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                                shape: BoxShape
+                                                                    .circle,
+                                                                color: Colors
+                                                                    .grey[700],
+                                                              ),
+                                                          child: const Icon(
+                                                            Icons.flag,
+                                                            color:
+                                                                Colors.white70,
+                                                            size: 16,
+                                                          ),
+                                                        );
+                                                      },
+                                                ),
+                                              ),
+                                            ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(width: 120),
+                                  ],
+                                ),
+                              ),
+                              if (driverData['imageUrl'] != null)
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      topRight: Radius.circular(12),
+                                      bottomRight: Radius.circular(12),
+                                    ),
+                                    child: Image.network(
+                                      driverData['imageUrl'],
+                                      width: 140,
+                                      height: 120,
+                                      fit: BoxFit.cover,
+                                      alignment: const Alignment(0.0, -1.0),
+                                      errorBuilder:
+                                          (context, error, stackTrace) {
+                                            return Container(
+                                              width: 130,
+                                              height: 102,
+                                              color: Colors.grey,
+                                              child: const Icon(
+                                                Icons.person,
+                                                color: Colors.white,
+                                              ),
+                                            );
+                                          },
                                     ),
                                   ),
-                                  const SizedBox(width: 120),
-                                ],
-                              ),
-                            ),
-                            if (driver is Map && driver['imageUrl'] != null)
+                                ),
                               Positioned(
+                                right: 10,
                                 top: 0,
-                                right: 0,
-                                child: ClipRRect(
-                                  borderRadius: const BorderRadius.only(
-                                    topRight: Radius.circular(12),
-                                    bottomRight: Radius.circular(12),
-                                  ),
-                                  child: Image.network(
-                                    driver['imageUrl'],
-                                    width: 140,
-                                    height: 120,
-                                    fit: BoxFit.cover,
-                                    alignment: const Alignment(0.0, -1.0),
-                                    errorBuilder: (context, error, stackTrace) {
-                                      return Container(
-                                        width: 130,
-                                        height: 102,
-                                        color: Colors.grey,
-                                        child: const Icon(
-                                          Icons.person,
-                                          color: Colors.white,
-                                        ),
-                                      );
-                                    },
+                                bottom: 0,
+                                child: Center(
+                                  child: IconButton(
+                                    icon: const Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Colors.white,
+                                    ),
+                                    onPressed: () =>
+                                        _navigateToDriverDetail(driverData),
                                   ),
                                 ),
                               ),
-                          ],
+                            ],
+                          ),
                         ),
                       );
                     }).toList(),
