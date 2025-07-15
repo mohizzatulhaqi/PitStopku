@@ -6,7 +6,7 @@ import 'package:pitstop/widget/comparison/selection_card.dart';
 import 'package:pitstop/widget/comparison/team_comparison.dart';
 
 class ComparisonPage extends StatefulWidget {
-  const ComparisonPage({Key? key}) : super(key: key);
+  const ComparisonPage({super.key});
 
   @override
   State<ComparisonPage> createState() => _ComparisonPageState();

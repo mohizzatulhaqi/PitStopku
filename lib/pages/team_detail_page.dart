@@ -407,7 +407,7 @@ class _TeamDetailPageState extends State<TeamDetailPage> {
                           ),
                         ),
                       );
-                    }).toList(),
+                    }),
                   ] else ...[
                     Container(
                       padding: const EdgeInsets.all(16),

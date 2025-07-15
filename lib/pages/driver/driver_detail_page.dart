@@ -131,7 +131,7 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                       bottom: 0,
                       child: Hero(
                         tag: 'driverImage_${widget.driver['name']}',
-                        child: Container(
+                        child: SizedBox(
                           width: 280,
                           height: 280,
                           child: ClipRRect(
@@ -198,7 +198,7 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                       top: 90,
                       left: 140,
                       child: GlassCard(
-                        child: Container(
+                        child: SizedBox(
                           width: 60,
                           height: 60,
                           child: ClipRRect(
@@ -441,7 +441,7 @@ class _DriverDetailPageState extends State<DriverDetailPage> {
                                   ),
                                 );
                               })
-                              .toList(),
+                              ,
                         ],
                       ),
                     ),

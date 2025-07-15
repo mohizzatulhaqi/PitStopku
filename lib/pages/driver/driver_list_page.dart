@@ -5,7 +5,7 @@ import 'package:pitstop/theme/custom_colors.dart';
 import 'package:pitstop/widget/scroll_to_top_fab.dart';
 
 class DriverListPage extends StatefulWidget {
-  const DriverListPage({Key? key}) : super(key: key);
+  const DriverListPage({super.key});
 
   @override
   State<DriverListPage> createState() => _DriverListPageState();
