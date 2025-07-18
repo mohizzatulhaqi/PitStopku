@@ -1,0 +1,8 @@
+<resources>
+    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    
+    </style>
+    <style name="NormalTheme" parent="Theme.AppCompat.Light.NoActionBar">
+       
+    </style>
+</resources> 
