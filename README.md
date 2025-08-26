@@ -1,57 +1,33 @@
-# 🏁 PitStopku
+🏁 PitStopku
+A beautiful and modern Flutter app for Formula 1 fans! Get all the essential info about teams, drivers, the race calendar, and compare stats in a stylish, responsive, and cross-platform experience.
 
-A beautiful and modern Flutter app for Formula 1 fans! Get all the info about teams, drivers, race calendar, and compare stats in a stylish, responsive, and cross-platform experience.
+🚀 Features
+Home Dashboard: Quick access to all F1 essentials.
 
----
+Teams & Drivers: Browse, search, and view detailed info on your favorite teams and drivers.
 
-## 🚀 Features
-<<<<<<< HEAD
-- **Home Dashboard**: Quick access to all F1 essentials
-- **Teams & Drivers**: Browse, search, and view detailed info
-- **Race Calendar**: See all Grand Prix 2025 schedules
-- **Comparison**: Compare drivers or teams side by side
-- **Favorites**: Mark your favorite teams and drivers
-- **Responsive UI**: Looks great on mobile & web
-- **Hero Animations**: Smooth transitions between list and detail
-- **Dark Theme**: Eye-friendly and modern
+Race Calendar: See the full Grand Prix schedule for the 2025 season.
 
----
+Comparison: Compare drivers or teams side by side.
 
-## ⚡ Getting Started
-1. **Clone this repo**
-   ```bash
-   git clone https://github.com/mohizzatulhaqi/PitStopku.git
-   cd pitstop
-   ```
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
-   or for web:
-   ```bash
-   flutter run -d chrome
-   ```
+Favorites: Mark and easily access your favorite teams and drivers.
 
-=======
+Responsive UI: The app looks great on both mobile and web.
 
-- **Home Dashboard**: Quick access to all F1 essentials
-- **Teams & Drivers**: Browse, search, and view detailed info
-- **Race Calendar**: See all Grand Prix schedules
-- **Comparison**: Compare drivers or teams side by side
-- **Favorites**: Mark your favorite teams and drivers
-- **Responsive UI**: Looks great on mobile & web
-- **Hero Animations**: Smooth transitions between list and detail
-- **Dark Theme**: Eye-friendly and modern
+Hero Animations: Enjoy smooth transitions between list and detail pages.
 
----
+Dark Theme: A modern, eye-friendly theme for a better viewing experience.
 
-## 📁 Folder Structure
+🛠️ Tech Stack
+Flutter 3.x
 
-```
+Dart
+
+Material Design
+
+Responsive Layouts
+
+📁 Folder Structure
 lib/
   main.dart
   pages/
@@ -69,67 +45,35 @@ lib/
   widget/         # Reusable UI components
   model/          # Data models & static data
   theme/          # Custom colors & theme
-```
+⚡ Getting Started
+Clone this repository
 
----
+Bash
+git clone https://github.com/mohizzatulhaqi/PitStopku.git
+cd PitStopku
+Install dependencies
 
-## 🛠️ Tech Stack
+Bash
+flutter pub get
+Run the app
 
-- [Flutter](https://flutter.dev/) 3.x
-- Dart
-- Material Design
-- Responsive Layouts
+Bash
+flutter run
+To run for the web:
 
----
+Bash
+flutter run -d chrome
+✨ Preview
+"Racing is life. Anything before or after is just waiting." - Steve McQueen
 
-## ⚡ Getting Started
+See how the app looks with screenshots or GIFs of the Home, Teams, Drivers, Race Calendar, and Comparison pages.
 
-1. **Clone this repo**
-   ```bash
-   git clone <repo-url>
-   cd pitstop
-   ```
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
-   or for web:
-   ```bash
-   flutter run -d chrome
-   ```
+Highlight the smooth navigation and beautiful transitions.
 
->>>>>>> d1060e4 (fix: error importing TeamListPage)
----
+Show its responsiveness on both mobile and web layouts.
 
-## ✨ Preview
+👤 Author
+Moh Izzatul Haqi
 
-<<<<<<< HEAD
-=======
-> _"Racing is life. Anything before or after is just waiting."_
-
->>>>>>> d1060e4 (fix: error importing TeamListPage)
-- Home, Teams, Drivers, Race Calendar, and Comparison pages
-- Smooth navigation and beautiful transitions
-- Fully responsive for mobile and web
-
----
-
-## 👤 Author
-<<<<<<< HEAD
-- [mohizzatulhaqi](https://github.com/mohizzatulhaqi)
-
----
-=======
-
-- [Your Name](https://github.com/yourusername)
-
----
-
-## 📄 License
-
-MIT
->>>>>>> d1060e4 (fix: error importing TeamListPage)
+📄 License
+This project is licensed under the MIT License.
