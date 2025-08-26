@@ -60,15 +60,22 @@ Run the app
 flutter run
 atau untuk web:
 flutter run -d chrome
+```
 
-✨ Preview
+---
+
+## ✨ Preview
 "Racing is life. Anything before or after is just waiting."
 Home, Teams, Drivers, Race Calendar, and Comparison pages
 Smooth navigation and beautiful transitions
 Fully responsive for mobile and web
 
-👤 Author
+---
+
+## 👤 Author
 mohizzatulhaqi
 
-📄 License
+---
+
+## 📄 License
 MIT
